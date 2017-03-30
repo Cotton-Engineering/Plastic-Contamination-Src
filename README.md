@@ -1,4 +1,4 @@
-# Plastic-Contamination-Src
+# Plastic Contamination Source Code
 Development of Systems to Identify and Remove Plastic Contamination From Cotton
 
 # Machine Vision Sensor Development
