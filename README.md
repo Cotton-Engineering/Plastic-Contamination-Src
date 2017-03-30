@@ -1,5 +1,6 @@
 # Plastic Contamination Source Code
-This repository holds the Software Source Code for the:  
+This repository holds the Software Source Code for the Project:  
+  
 Development of Systems to Identify and Remove Plastic Contamination From Cotton
 
 For an over-view of the software; please see the respository: Plastic-Contamination-Notes  
