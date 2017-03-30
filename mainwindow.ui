@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>705</width>
+    <height>857</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label_comm">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>550</y>
+      <width>672</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Comm:</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_hue_thresLow">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>723</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_hue_thresHigh">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>765</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_lowThres">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>639</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="value">
+     <number>33</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_LT">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>618</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>15</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Low Threshold</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hueThres_low">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>702</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>15</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Hue Threshold (low)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_info">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>576</y>
+      <width>672</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Info:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hueThres_high">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>744</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>15</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Hue Threshold (high)</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_highThres">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>681</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="value">
+     <number>240</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_HT">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>660</y>
+      <width>672</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>15</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>High Threshold</string>
+    </property>
+   </widget>
+   <widget class="my_qlabel" name="label_imageShow">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>640</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>640</width>
+      <height>480</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Pictures/Dereks_Trash.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>705</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCamera">
+    <property name="title">
+     <string>Camera</string>
+    </property>
+    <addaction name="action_Start"/>
+    <addaction name="actionImage_Save"/>
+    <addaction name="action_Open_Image"/>
+    <addaction name="action_Process_Image_as_Live"/>
+    <addaction name="actionSave_Pixel_Class_Values"/>
+    <addaction name="actionCreate_Classifier"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="action_Process_Image"/>
+    <addaction name="action_Object_Process"/>
+    <addaction name="separator"/>
+    <addaction name="action_Live_Video"/>
+    <addaction name="separator"/>
+    <addaction name="actionUse_Bayes_Classifier"/>
+    <addaction name="actionUse_HSV"/>
+    <addaction name="separator"/>
+    <addaction name="actionTune_Hue_Blue"/>
+    <addaction name="actionTune_Hue_Yellow"/>
+    <addaction name="actionTune_Hue_Green"/>
+    <addaction name="actionTune_Hue_Red2"/>
+    <addaction name="actionTune_Hue_Red"/>
+    <addaction name="actionTune_Hue_Cyan"/>
+    <addaction name="separator"/>
+    <addaction name="actionTune_Hue_Saturation"/>
+    <addaction name="actionTune_Hue_Value"/>
+    <addaction name="separator"/>
+    <addaction name="action_Clear_Background"/>
+    <addaction name="actionCLAHE_Filter"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuCamera"/>
+   <addaction name="menuOptions"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Start">
+   <property name="text">
+    <string>&amp;Start</string>
+   </property>
+  </action>
+  <action name="actionImage_Save">
+   <property name="text">
+    <string>Image &amp;Save</string>
+   </property>
+  </action>
+  <action name="action_Open_Image">
+   <property name="text">
+    <string>&amp;Open Image</string>
+   </property>
+  </action>
+  <action name="action_Process_Image_as_Live">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Process Image as Live</string>
+   </property>
+  </action>
+  <action name="action_Process_Image">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Process Image</string>
+   </property>
+  </action>
+  <action name="action_Object_Process">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Object Process</string>
+   </property>
+  </action>
+  <action name="actionUse_HSV">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Use &amp;HSV</string>
+   </property>
+  </action>
+  <action name="action_Live_Video">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Live Video</string>
+   </property>
+  </action>
+  <action name="action_Clear_Background">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Clear Background</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Blue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: &amp;Blue</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Yellow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: &amp;Yellow</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Green">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: &amp;Green</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Red">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: &amp;Red</string>
+   </property>
+   <property name="toolTip">
+    <string>Tune Hue: Red-2</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Cyan">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: &amp;Cyan</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Saturation">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: &amp;Saturation</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Value">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: &amp;Value</string>
+   </property>
+  </action>
+  <action name="actionSave_Pixel_Class_Values">
+   <property name="text">
+    <string>Save Pixel &amp;Class. Values</string>
+   </property>
+  </action>
+  <action name="actionTune_Hue_Red2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tune Hue: Red-1</string>
+   </property>
+  </action>
+  <action name="actionCLAHE_Filter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>CLAHE Filter</string>
+   </property>
+  </action>
+  <action name="actionCreate_Classifier">
+   <property name="text">
+    <string>Create Classifier</string>
+   </property>
+  </action>
+  <action name="actionUse_Bayes_Classifier">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Use Bayes Classifier</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>my_qlabel</class>
+   <extends>QLabel</extends>
+   <header location="global">my_qlabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

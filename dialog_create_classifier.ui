@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_create_classifier</class>
+ <widget class="QDialog" name="Dialog_create_classifier">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>523</width>
+    <height>693</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_save_classifier_exit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>550</y>
+     <width>331</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select, Save and Use This Classifier; Then Exit</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>270</y>
+     <width>461</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="pushButton_save_classifier">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Classifier</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_load_classifier">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Classifier</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_create_compute_classifier">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Build Classifier</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>221</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Selection to determine which type of classifier is active; all types are built when building classifier</string>
+    </property>
+    <property name="title">
+     <string>Classifier Type</string>
+    </property>
+    <widget class="QRadioButton" name="radioButton_Knn">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>K nearest-neighbor</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_Bayes">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bayes classifier</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_DecisionTree">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Decision Tree</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_SVM">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>SVM classifier</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_NN">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Neural Net</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_CDNN">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>201</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Deep Neural Net</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_load_lut">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load LUT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_save_lut2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save LUT</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>461</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Class Id</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_class_id">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>161</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>99</number>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Class Addition Method</string>
+    </property>
+    <widget class="QRadioButton" name="radioButton_appendRegion">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Append Region</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_createNewRegion">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Create New Class</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_use_full_image_for_training_this_class">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>261</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Entire Image to Training Set</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_capture_trainingImage">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>30</y>
+      <width>261</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="text">
+     <string>Add Classed Region to Training Set</string>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_load_csv_trainingSet">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>130</y>
+      <width>261</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Training Set from File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_clear_trainingSet">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>261</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear Training Set</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>441</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_save_trainingSet">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>10</y>
+       <width>251</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Currently Defined Training Set</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_fileModeAppend">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>161</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>File Mode: Append</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>640</y>
+     <width>461</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

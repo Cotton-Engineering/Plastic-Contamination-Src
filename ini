@@ -1,0 +1,35 @@
+# configuration file
+[GROUP_TEST]
+Param1 = 99;
+
+[GROUP_SaturValue]
+low_satVal = 66
+high_satVal = 248
+low_val = 0
+high_val = 255
+low_blue_satVal = 69
+high_blue_satVal = 238
+low_grn_satVal = 69
+high_grn_satVal = 238
+low_red_satVal = 66
+high_red_satVal = 248
+low_red2_satVal = 66
+high_red2_satVal = 248
+low_yellow_satVal = 66
+high_yellow_satVal = 248
+low_cyan_satVal = 66
+high_cyan_satVal = 248
+
+[GROUP_HUES]
+low_blue_h = 113
+high_blue_h = 117
+low_grn_h = 45
+high_grn_h = 75
+low_red_h = 150
+high_red_h = 162
+low_red2_h = 0
+high_red2_h = 5
+low_yellow_h = 20
+high_yellow_h = 50
+low_cyan_h = 80
+high_cyan_h = 100
