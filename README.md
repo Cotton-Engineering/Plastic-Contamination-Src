@@ -1,5 +1,12 @@
 # Plastic Contamination Source Code
+This repository holds the Software Source Code for the:  
 Development of Systems to Identify and Remove Plastic Contamination From Cotton
+
+For an over-view of the software; please see the respository: Plastic-Contamination-Notes  
+where you will find an over-view video.  
+
+For those who are unfamiliar with GitHub and QT; the Notes directory alsong includes notes   
+on how to setup a QT IDE project that will automatically link in this source code repository.  
 
 # Machine Vision Sensor Development
 
