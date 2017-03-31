@@ -2,6 +2,7 @@
 #
 # Project created by QtCreator 2017-02-11T02:54:27
 #
+# Updated 3-29-17
 #-------------------------------------------------
 
 QT       += core gui opengl
@@ -70,7 +71,9 @@ INCLUDEPATH += /usr/include
 #INCLUDEPATH += /lib/udev
 
 
-//LIBS += `pkg-config opencv --cflags --libs`
+
+# Set OpenCV library paths
+# LIBS += `pkg-config opencv --cflags --libs`
 LIBS += -L/usr/local/lib -lopencv_shape -lopencv_stitching -lopencv_objdetect -lopencv_superres -lopencv_videostab -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_imgcodecs -lopencv_video -lopencv_photo -lopencv_ml -lopencv_imgproc -lopencv_flann -lopencv_viz -lopencv_core
 
 #add libs for flycapture cameras
