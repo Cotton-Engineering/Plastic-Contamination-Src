@@ -1,6 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+//Main User Gui Dialog
+
+
 #include <QMainWindow>
 
 #include <QTime>
