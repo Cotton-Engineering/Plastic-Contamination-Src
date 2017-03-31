@@ -26,6 +26,8 @@
 #include "dialog_create_classifier.h"
 #include "copencv_utils.h"
 #include "cclassifier.h"
+#include "cobjectclassifier.h"
+
 
 
 //#include "flycapture/FlyCapture2.h"
@@ -131,8 +133,6 @@ private:
     void process_image_HSV(cv::Mat &img);  //note: use of '&' means reference, so function is allowed to change it; allows for stronger type checking than a pointer, '*'
     void turn_off_all_HUV_tuners();
 
-    void FindBlobs(const cv::Mat &binary, std::vector < std::vector<cv::Point2i> > &blobs, std::vector <cv::Point2d> &blobCenters);
-
     void init_capture();
     void clear_mouse_capture_buffer();
 
@@ -170,10 +170,11 @@ private:
 
     Dialog_create_classifier *dcc;
 
+
     cOpenCv_Utils *cocv;
 
     cClassifier *cclass;
-
+    cObjectClassifier *cObjClasser;
 
     bool loopTimerStarted;
 

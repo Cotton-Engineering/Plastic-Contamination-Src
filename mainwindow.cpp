@@ -35,6 +35,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     cclass = new cClassifier();
 
+    cObjClasser = new cObjectClassifier();
+
+
 
     loopTimerStarted = false;
 
@@ -1446,7 +1449,7 @@ void MainWindow::process_image_HSV(cv::Mat &img)
            std::vector <cv::Point2d> blob_centers_all;
            std::vector < std::vector<cv::Point2i > > blobs;
 
-           FindBlobs(binary_dst, blobs, blob_centers_all);
+           cObjClasser->FindBlobs(binary_dst, blobs, blob_centers_all);
 
            //use slider for this?
            int MIN_BLOB_SIZE=10;
@@ -1496,79 +1499,6 @@ void MainWindow::process_image_HSV(cv::Mat &img)
 
 
 
-#define Object_Recognition_Start {
-
-void MainWindow::FindBlobs(const cv::Mat &binary, std::vector < std::vector<cv::Point2i> > &blobs, std::vector <cv::Point2d> &blobCenters)
-{
-    //std::vector <cv::Point2d> blobCenters;
-
-    blobs.clear();
-
-    // Fill the label_image with the blobs
-    // 0  - background
-    // 1  - unlabelled foreground
-    // 2+ - labelled foreground
-
-    cv::Mat label_image;
-    binary.convertTo(label_image, CV_32SC1);
-
-    int label_count = 2; // starts at 2 because 0,1 are used already
-
-    for(int y=0; y < label_image.rows; y++)
-    {
-        int *row = (int*)label_image.ptr(y);
-        for(int x=0; x < label_image.cols; x++)
-        {
-            if(row[x] != 1)
-            {
-                continue;
-            }
-
-            cv::Rect rect;
-            //use floodFill to fill-in all neighboring points, returns area and ptr to rect surrounding flood-filled region
-
-
-            int area = cv::floodFill(label_image, cv::Point(x,y), label_count, &rect, 0, 0, 4);
-
-            std::vector <cv::Point2i> blob;
-
-            double center_x = (double)rect.x + (double)rect.width/2.0;
-            double center_y = (double)rect.y + (double)rect.height/2.0;
-            cv::Point2d pCenter;
-            pCenter.x = center_x;
-            pCenter.y = center_y;
-
-            //append to blob_centers std::vector
-            blobCenters.push_back(pCenter);
-
-
-            int cnt = 0;
-
-            for(int i=rect.y; i < (rect.y+rect.height); i++)
-            {
-                int *row2 = (int*)label_image.ptr(i);
-                for(int j=rect.x; j < (rect.x+rect.width); j++)
-                {
-                    if(row2[j] != label_count)
-                    {
-                        continue;
-                    }
-
-                    blob.push_back(cv::Point2i(j,i));
-
-                }
-            }
-
-            blobs.push_back(blob);
-
-            label_count++;
-        }
-    }
-}
-
-
-
-#define Object_Recognition_End }
 
 
 //should only be here if region has been captured and confirmed via ok on dialog box

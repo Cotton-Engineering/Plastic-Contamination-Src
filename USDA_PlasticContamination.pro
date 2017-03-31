@@ -32,7 +32,8 @@ SOURCES += main.cpp\
     my_qlabel.cpp \
     copencv_utils.cpp \
     cclassifierdata.cpp \
-    cutils.cpp
+    cutils.cpp \
+    cobjectclassifier.cpp
 
 HEADERS  += mainwindow.h \
     dialog_create_classifier.h \
@@ -40,7 +41,8 @@ HEADERS  += mainwindow.h \
     my_qlabel.h \
     copencv_utils.h \
     cclassifierdata.h \
-    cutils.h
+    cutils.h \
+    cobjectclassifier.h
 
 FORMS    += mainwindow.ui \
     dialog_create_classifier.ui
