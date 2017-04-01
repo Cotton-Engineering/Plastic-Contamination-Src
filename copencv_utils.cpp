@@ -889,3 +889,134 @@ int cOpenCv_Utils::knn_getBestSelection(Mat neighborsClassList, int MAX_NUM_CLAS
     return bestClass;
 }
 
+bool cOpenCv_Utils::compute_mean_columns(cv::Mat dataMat, vector<double> &mean_dataVector)
+{
+    bool ok = false;
+
+    cv::Mat mean_dataMat;
+
+    int dim = 0;  //if 0 then matrix will reduce to a single row; if 1 then will reduce to single column
+
+    cv::reduce(dataMat, mean_dataMat, dim, CV_REDUCE_AVG);
+
+    int n_cols = mean_dataMat.cols;
+
+    for(int i=0;i<n_cols;i++)
+    {
+        double mean_i = mean_dataMat.at<double>(0,i);
+        mean_dataVector.push_back(mean_i);
+    }
+
+    ok = true;
+
+    return ok;
+}
+
+bool cOpenCv_Utils::compute_mean_rows(cv::Mat dataMat, vector<double> &mean_dataVector)
+{
+    bool ok = false;
+
+    cv::Mat mean_dataMat;
+
+    int dim = 1;  //if 0 then matrix will reduce to a single row; if 1 then will reduce to single column
+
+    cv::reduce(dataMat, mean_dataMat, dim, CV_REDUCE_AVG);
+
+    int n_rows = mean_dataMat.rows;
+
+    for(int i=0;i<n_rows;i++)
+    {
+        double mean_i = mean_dataMat.at<double>(i,0);
+        mean_dataVector.push_back(mean_i);
+    }
+
+    ok = true;
+
+    return ok;
+}
+
+
+bool cOpenCv_Utils::compute_stdevMean_columns(cv::Mat dataMat, cv::Mat &mean_dataMat,cv::Mat &stdev_dataMat)
+{
+    bool ok = false;
+
+    int nRows = dataMat.rows;
+    int nCols = dataMat.cols;
+
+    mean_dataMat = Mat::zeros(nRows, nCols, CV_32F);
+    stdev_dataMat = Mat::zeros(nRows, nCols, CV_32F);
+
+    cv::Mat stdevMat, meanMat;
+
+    int n_cols = dataMat.cols;
+
+    for(int i=0;i<n_cols;i++)
+    {
+        cv::meanStdDev(dataMat.col(i),meanMat.col(i),stdevMat.col(i));
+        double stdev = stdevMat.at<double>(0);
+        double mean = meanMat.at<double>(0);
+
+        stdev_dataMat.at<double>(i) = stdev;
+        mean_dataMat.at<double>(i) = mean;
+    }
+
+    ok = true;
+
+    return ok;
+}
+
+
+bool cOpenCv_Utils::compute_stdevMean_columns(cv::Mat dataMat, vector<double> &mean_dataVector, vector<double> &stdev_dataVector)
+{
+    bool ok = false;
+
+    cv::Mat stdevMat, meanMat;
+
+    int n_cols = dataMat.cols;
+
+    for(int i=0;i<n_cols;i++)
+    {
+        cv::meanStdDev(dataMat.col(i),meanMat.col(i),stdevMat.col(i));
+        double stdev = stdevMat.at<double>(0);
+        double mean = meanMat.at<double>(0);
+
+        stdev_dataVector.push_back(stdev);
+        mean_dataVector.push_back(mean);
+    }
+
+    ok = true;
+
+    return ok;
+
+}
+
+bool cOpenCv_Utils::normalize_columns(cv::Mat &dataMat, cv::Mat &mean_dataMat,cv::Mat &stdev_dataMat)
+{
+    bool ok = false;
+
+    int nRows = dataMat.rows;
+    int nCols = dataMat.cols;
+
+    cv::Mat tMat1 = Mat::zeros(nRows, nCols, CV_32F);
+    cv::Mat tMat2 = Mat::zeros(nRows, nCols, CV_32F);
+
+    int n_cols = dataMat.cols;
+
+    for(int i=0;i<n_cols;i++)
+    {
+        //subtract mean
+        cv::subtract(dataMat.col(i),mean_dataMat.col(i),tMat1.col(i));
+
+        //divide by standard-deviation
+        cv::divide(tMat1.col(i),stdev_dataMat.col(i),tMat2.col(i));
+    }
+
+    dataMat = tMat2;
+
+    ok = true;
+
+    return ok;
+
+}
+
+

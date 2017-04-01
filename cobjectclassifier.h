@@ -58,6 +58,8 @@ public:
 
     bool getObjectFeatures(vector<vector<Point> > &contours, OBJECT_FEATURES &obj_features);
 
+
+
 signals:
 
 public slots:

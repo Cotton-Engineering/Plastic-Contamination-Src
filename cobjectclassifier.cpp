@@ -211,3 +211,8 @@ void cObjectClassifier::FindBlobs(const cv::Mat &binary, std::vector < std::vect
         }
     }
 }
+
+
+
+
+

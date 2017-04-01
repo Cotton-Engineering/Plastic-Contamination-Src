@@ -86,6 +86,15 @@ public:
     int knn_getBestSelection(Mat neighborsClassList, int MAX_NUM_CLASSES);
     //bool sort_knnBest (const cv::Point p1, const cv::Point p2);
 
+    bool compute_mean_columns(cv::Mat dataMat, vector<double> &mean_dataMat);
+    bool compute_mean_rows(cv::Mat dataMat, vector<double> &mean_dataMat);
+
+    bool compute_stdevMean_columns(cv::Mat dataMat, vector<double> &mean_dataVector, vector<double> &stdev_dataVector);
+    bool compute_stdevMean_columns(cv::Mat dataMat, cv::Mat &mean_dataMat,cv::Mat &stdev_dataMat);
+
+    bool normalize_columns(cv::Mat &dataMat, cv::Mat &mean_dataMat,cv::Mat &stdev_dataMat);
+
+    //bool get_vectorMatrix_from_Mat(cv::Mat dataMat, vector<vector<double>> &vector_matrix);
 
 signals:
 
