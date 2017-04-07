@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Dialog_Classifier_Colors</class>
  <widget class="QDialog" name="Dialog_Classifier_Colors">
@@ -5,13 +6,299 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>584</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>470</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>321</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Configure Class Rendering Colors</string>
+   </property>
+   <widget class="QCheckBox" name="checkBox_class1">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>40</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>80</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>120</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class4">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>160</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class5">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>200</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class6">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>240</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class7">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>280</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class8">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>320</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class9">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>360</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_class10">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>400</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Transparant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_class10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Color Class 1</string>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>

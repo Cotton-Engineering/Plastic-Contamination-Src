@@ -111,10 +111,10 @@ QString cUtils::get_saveFileName()
             0,  //must be null as we're not using a Window widget here
             QString("Save Image As:"),
             QString("/home/"),
-            "Image File: (*.jpg); All files (*.*)" );
+            "Video File: (*.avi); Image File: (*.jpg); All files (*.*)" );
 
 
-//    QString filePathName = "/home/cfd0/Documents/training_set.csv";
+    //QString filePathName = "/home/cfd0/Documents/training_set.mp4";
 
 
     return filePathName;

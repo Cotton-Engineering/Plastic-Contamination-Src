@@ -33,7 +33,9 @@ SOURCES += main.cpp\
     copencv_utils.cpp \
     cclassifierdata.cpp \
     cutils.cpp \
-    cobjectclassifier.cpp
+    cobjectclassifier.cpp \
+    dialog_imageproc.cpp \
+    dialog_classifier_colors.cpp
 
 HEADERS  += mainwindow.h \
     dialog_create_classifier.h \
@@ -42,10 +44,14 @@ HEADERS  += mainwindow.h \
     copencv_utils.h \
     cclassifierdata.h \
     cutils.h \
-    cobjectclassifier.h
+    cobjectclassifier.h \
+    dialog_imageproc.h \
+    dialog_classifier_colors.h
 
 FORMS    += mainwindow.ui \
-    dialog_create_classifier.ui
+    dialog_create_classifier.ui \
+    dialog_imageproc.ui \
+    dialog_classifier_colors.ui
 
 
 INCLUDEPATH += .

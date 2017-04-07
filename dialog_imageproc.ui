@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Dialog_ImageProc</class>
  <widget class="QDialog" name="Dialog_ImageProc">
@@ -5,13 +6,2334 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>625</width>
+    <height>726</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>690</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>561</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Image Processing Stages</string>
+   </property>
+   <widget class="QComboBox" name="comboBox_image_processing_state_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_stage_1">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>40</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>80</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_3">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>120</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_4">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>160</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_5">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>200</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_6">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>240</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_7">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>280</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_8">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>320</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_9">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>360</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_10">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>400</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_11">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>440</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_12">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>480</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_13">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>520</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_14">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>560</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_stage_15">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>600</y>
+      <width>311</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Params: </string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_12">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_13">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_14">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_image_processing_state_15">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>600</y>
+      <width>221</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_HSV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_RGB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Convert_to_Grey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Select_Region_of_Interest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apply_Lens_Correction</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Equalization</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Histogram_Stretch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blur_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Median_Filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Canny</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_RobertsCross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Edge_Detection_Laplacian</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adaptive_Threshold</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bayes_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HSV_Color_Classify_Pixels</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Objects_Algo_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Extract_Object_Features</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Find_Circles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Feature_Classify_Objects</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>White_Balance_Correction</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>

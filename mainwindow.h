@@ -108,6 +108,8 @@ private slots:
 
     void on_actionUse_Bayes_Classifier_triggered(bool checked);
 
+    void on_actionSave_Video_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
 
@@ -153,6 +155,7 @@ private:
     void load_image();
 
 
+
 protected:
     void timerEvent(QTimerEvent *event);
     void keyPressEvent( QKeyEvent* event ) ;
@@ -163,6 +166,7 @@ private:
     QSettings * p_settings;
 
     cv::VideoCapture mCapture;  //standard usb camera
+    cv::VideoWriter video_writer;
     cv::Mat image_copy;
     cv::Mat zoom_image;
     cv::Mat processing_image;
@@ -175,6 +179,10 @@ private:
 
     cClassifier *cclass;
     cObjectClassifier *cObjClasser;
+
+    bool bSaveVideo=false;
+    bool bSaveVideoFileNameLoaded = false;
+    QString sSaveVideo_FileName;
 
     bool loopTimerStarted;
 

@@ -333,6 +333,7 @@ void MainWindow::on_action_Start_triggered()
     //cap.set(CV_CAP_PROP_FRAME_WIDTH,640);
     //cap.set(CV_CAP_PROP_FRAME_HEIGHT,480);
 
+    bSaveVideoFileNameLoaded = false;
 
     bLiveVideo = true;
     ui->action_Live_Video->setChecked(true);
@@ -346,6 +347,89 @@ void MainWindow::on_action_Start_triggered()
         startTimer(10);  //set for 50ms timer rate
     }
 }
+
+
+void MainWindow::on_actionSave_Video_triggered(bool checked)
+{
+
+    if((!bSaveVideo)&&(bLiveVideo))
+    {
+        //need to pause live video so we can get reasonable access to the gui
+        bLiveVideo = false;
+
+        int ex = static_cast<int>(mCapture.get(CV_CAP_PROP_FOURCC));
+        int codec = CV_FOURCC('M','J','P','G');
+        int fps = mCapture.get(CV_CAP_PROP_FPS);
+
+        //Size s = Size((int)mCapture.get(CV_CAP_PROP_FRAME_WIDTH),(int)mCapture.get(CV_CAP_PROP_FRAME_HEIGHT));
+
+        Size s = image_copy.size();
+
+        bool isColor = (image_copy.type() == CV_8UC3);
+
+        //get file for saving
+        cUtils cutls;
+
+        QString filePathName = cutls.get_saveFileName();
+        //QString filePathName = get_saveFileName();
+
+        //turn video back on
+        bLiveVideo = true;
+
+        int n = filePathName.length();
+
+        if(n>0)
+        {
+            //convert QString to string
+            string str_filePathName = cutls.convert_QString_to_stdString(filePathName);
+
+
+            //string str_filePathName = "./live.avi";
+            //string str_filePathName = "/home/cfd0/Pictures/live.avi";
+
+            //bool isOpened = video_writer.open(str_filePathName,ex,fps,s,true);
+            bool isOpened = video_writer.open(str_filePathName,codec,fps,s,isColor);
+
+            if(isOpened)
+            {
+                bSaveVideo = true;
+                bSaveVideoFileNameLoaded = true;
+                sSaveVideo_FileName = filePathName;
+            }
+            else
+            {
+                //raise error; couldn't open Video-Save File
+                QMessageBox msgBox;
+                msgBox.critical(0, "Error", "Couldn't Open Video-Save File; saving video disabled; please try again");
+                bSaveVideo = false;
+                //turn off menu check-box
+                ui->actionSave_Video->setChecked(false);
+            }
+        }
+        else
+        {
+            //raise error; couldn't open Video-Save File
+            QMessageBox msgBox;
+            msgBox.critical(0, "Error", "Couldn't Open Video-Save File; saving video disabled; please try again");
+            bSaveVideo = false;
+            //turn off menu check-box
+            ui->actionSave_Video->setChecked(false);
+        }
+
+    }
+    else
+    {
+        if(bSaveVideo)  //if true; means we've been recording
+        {
+            bSaveVideo = false;
+
+           //save frame to file
+           video_writer.release();  //let it go so it'll close the file out
+        }
+    }
+
+}
+
 
 void MainWindow::on_actionImage_Save_triggered()
 {
@@ -936,6 +1020,14 @@ void MainWindow::timerEvent(QTimerEvent *event)
 
      //modify image to reflect current zoom and pan settings
      process_zoomPan(image);  //this makes a copy "zoom_image" case we want to create a classifier from it that is free from point capture lines and painted pts
+
+
+     //save live-Video
+     if(bSaveVideo)
+     {
+        //save frame to file
+        video_writer.write(image);
+     }
 
 
 
@@ -1789,3 +1881,5 @@ void MainWindow::expand_rect_to_preserve_aspectRatio(Rect &rect)
     double z = new_aspectRatio;
 
 }
+
+
